@@ -13,4 +13,9 @@ call GPIO_Init(GPIOA, $osp)
 call USART_StructInit($osp)
 call USART_Init(USART2, $osp)
 call USART_Cmd(USART2, ENABLE)
-
+set $i = 0
+while( $i <= 6 ) 
+    call USART_SendData(USART2, "HELLO!"[$i])
+    set $i++
+end
+set $sp = $sp + 16
