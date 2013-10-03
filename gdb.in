@@ -19,3 +19,5 @@ while( $i <= 6 )
     set $i++
 end
 set $sp = $sp + 16
+detach
+quit
